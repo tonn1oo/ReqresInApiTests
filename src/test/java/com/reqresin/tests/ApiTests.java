@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import static com.reqresin.tests.ReqresEndpoints.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 
 
 public class ApiTests {
@@ -81,7 +82,7 @@ public class ApiTests {
                 .then()
                 .log().body()
                 .statusCode(200)
-                .body("token", is(token));
+                .body("token", notNullValue());
     }
 
     @Test
