@@ -27,7 +27,7 @@ public class ApiTests {
 
 
     @Test
-    void SingleUsers() {
+    void singleUsers() {
 
         given()
                 .contentType(ContentType.JSON)
@@ -42,7 +42,7 @@ public class ApiTests {
     }
 
     @Test
-    void SingleUsersNotFound() {
+    void singleUsersNotFound() {
 
         given()
                 .contentType(ContentType.JSON)
@@ -56,7 +56,7 @@ public class ApiTests {
     }
 
     @Test
-    void CreateUserTest() {
+    void createUserTest() {
         given()
                 .body(bodyCreateUser)
                 .contentType(ContentType.JSON)
@@ -71,7 +71,7 @@ public class ApiTests {
     }
 
     @Test
-    void RegisterSuccessFull() {
+    void registerSuccessFull() {
         given()
                 .body(bodyRegisterSuccess)
                 .contentType(ContentType.JSON)
@@ -85,7 +85,7 @@ public class ApiTests {
     }
 
     @Test
-    void DeleteUsers() {
+    void deleteUsers() {
         given()
                 .contentType(ContentType.JSON)
                 .when()
@@ -97,7 +97,7 @@ public class ApiTests {
     }
 
     @Test
-    void LoginUnSuccessFul() {
+    void loginUnSuccessFul() {
         given()
                 .body(email)
                 .contentType(ContentType.JSON)
